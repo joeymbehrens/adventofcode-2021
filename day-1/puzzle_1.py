@@ -1,4 +1,5 @@
 input = open('input.txt').readlines()
+input = [int(line.replace('\n', '')) for line in input]
 
 increments = 0
 
@@ -7,6 +8,6 @@ for i, line in enumerate(input):
         continue;
 
     if (int(line) > int(input[i - 1])):
-        increments = increments + 1
+        increments += 1
 
 print(increments)
